@@ -28,7 +28,7 @@ $ curl https://getcomposer.org/installer -o composer-setup.php
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 58167  100 58167    0     0  39798      0  0:00:01  0:00:01 --:--:-- 40032
-$ php composer-setup.php --install-dir=bin --filename=composer
+$ mkdir -p bin; php composer-setup.php --install-dir=bin --filename=composer
 All settings correct for using Composer
 Downloading...
 
@@ -44,7 +44,39 @@ $ rm composer-setup.php
 ```
 $ bin/composer require pestphp/pest --dev --with-all-dependencies
 ..
-$ ./vendor/bin/pest --init
+pestphp/pest-plugin contains a Composer plugin which is currently not in your allow-plugins config. See https://getcomposer.org/allow-plugins
+Do you trust "pestphp/pest-plugin" to execute code and wish to enable it now? (writes "allow-plugins" to composer.json) [y,n,d,?] y
 ..
+$ ./vendor/bin/pest --version
+
+  Pest Testing Framework 2.24.3.  
+
+$ ./vendor/bin/pest --init
+
+   INFO  Preparing tests directory.
+
+  phpunit.xml ....................................................................................................... File created.  
+  tests/Pest.php .................................................................................................... File created.  
+  tests/TestCase.php ................................................................................................ File created.  
+  tests/Unit/ExampleTest.php ........................................................................................ File created.  
+  tests/Feature/ExampleTest.php ..................................................................................... File created.  
+
+  Wanna show Pest some love by starring it on GitHub? (yes/no) [no]:
+ > 
+
+  Star ............................................................................................ https://github.com/pestphp/pest  
+  News ................................................................................................ https://twitter.com/pestphp  
+  Videos .......................................................................................... https://youtube.com/@nunomaduro  
+  Sponsor .................................................................................. https://github.com/sponsors/nunomaduro  
+
 $ ./vendor/bin/pest
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ example
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ example 0.01s  
+
+  Tests:    2 passed (2 assertions)
+  Duration: 0.07s
 ```
