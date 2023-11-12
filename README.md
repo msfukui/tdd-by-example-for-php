@@ -12,6 +12,10 @@
 
 https://github.com/php-pds/skeleton
 
+Pest は init で作られた構成を見ると tests 配下に Unit, Feature を作成してその下に各テストファイルを配置する様なので、その方式に従います。
+
+今回はユニットテストを書いていくので Unit 配下にファイルを配置していきます。
+
 ### PHP
 
 ```
@@ -80,3 +84,5 @@ $ ./vendor/bin/pest
   Tests:    2 passed (2 assertions)
   Duration: 0.07s
 ```
+
+あとはやっていくだけ！
