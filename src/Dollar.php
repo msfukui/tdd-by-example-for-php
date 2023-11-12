@@ -10,9 +10,8 @@ class Dollar
     {
     }
 
-    public function times(int $multiplier): int|null
+    public function times(int $multiplier): Dollar
     {
-        $this->amount *= $multiplier;
-        return null;
+        return new Dollar($this->amount * $multiplier);
     }
 };
