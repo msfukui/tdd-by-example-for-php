@@ -1,5 +1,7 @@
 # tdd-by-emample-for-php
 
+[![UnitTest](https://github.com/msfukui/tdd-by-example-for-php/actions/workflows/php.yml/badge.svg)](https://github.com/msfukui/tdd-by-example-for-php/actions/workflows/php.yml)
+
 書籍「テスト駆動開発」を PHP で読み進めてみるレポジトリです。
 
 テストは練習がてら PEST(https://pestphp.com/) で書いていきます。
@@ -43,7 +45,7 @@ Composer version 2.6.3 2023-09-15 09:38:21
 $ rm composer-setup.php
 ```
 
-### PEST
+### Pest
 
 ```
 $ bin/composer require pestphp/pest --dev --with-all-dependencies
@@ -83,6 +85,32 @@ $ ./vendor/bin/pest
 
   Tests:    2 passed (2 assertions)
   Duration: 0.07s
+```
+
+### PHP Coding Standards Fixer
+
+```
+$ bin/composer require --dev friendsofphp/php-cs-fixer
+Info from https://repo.packagist.org: #StandWithUkraine
+./composer.json has been updated
+Running composer update friendsofphp/php-cs-fixer
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 24 installs, 0 updates, 0 removals
+...
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 24 installs, 0 updates, 0 removals
+...
+2 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating autoload files
+44 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+No security vulnerability advisories found.
+Using version ^3.26 for friendsofphp/php-cs-fixer
+$ vendor/bin/php-cs-fixer --version
+PHP CS Fixer 3.26.1 Crank Cake by Fabien Potencier and Dariusz Ruminski.
+PHP runtime: 8.2.10
 ```
 
 あとはやっていくだけ！
