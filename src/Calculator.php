@@ -1,10 +1,10 @@
 <?php
 
-declare (strict_types = 1);
+declare (strict_types=1);
 
 namespace TddByExampleForPhp;
 
-readonly final class Calculator
+final readonly class Calculator
 {
     public static function sum(int|float $a, int|float $b): int|float
     {
