@@ -1,4 +1,4 @@
-# tdd-by-emample-for-php
+# tdd-by-example-for-php
 
 [![UnitTest](https://github.com/msfukui/tdd-by-example-for-php/actions/workflows/php.yml/badge.svg)](https://github.com/msfukui/tdd-by-example-for-php/actions/workflows/php.yml)
 
