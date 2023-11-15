@@ -15,10 +15,4 @@ final class Franc extends Money
     {
         return new Franc($this->amount * $multiplier);
     }
-
-    public function equals(object $object): bool
-    {
-        $franc = $object;
-        return $this->amount === $franc->amount;
-    }
 };

@@ -7,4 +7,10 @@ namespace TddByExampleForPhp;
 class Money
 {
     protected int $amount;
+
+    public function equals(object $object): bool
+    {
+        $money = $object;
+        return $this->amount === $money->amount;
+    }
 };
