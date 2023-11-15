@@ -7,6 +7,6 @@ namespace TddByExampleForPhp;
 describe("Money", function () {
 
     test("equality", function () {
-        expect((new Franc(5))->equals(new Dollar(5)))->toBeFalse;
+        expect((Money::Franc(5))->equals(Money::dollar(5)))->toBeFalse;
     });
 });
