@@ -6,16 +6,10 @@ namespace TddByExampleForPhp;
 
 describe("Money", function () {
 
-    test("dollar multiplication", function () {
+    test("multiplication", function () {
         $five = Money::dollar(5);
         expect($five->times(2))->toEquals(Money::dollar(10));
         expect($five->times(3))->toEquals(Money::dollar(15));
-    });
-
-    test("frunc multiplication", function () {
-        $five = Money::franc(5);
-        expect($five->times(2))->toEquals(Money::franc(10));
-        expect($five->times(3))->toEquals(Money::franc(15));
     });
 
     test("equality", function () {
