@@ -10,6 +10,8 @@ abstract class Money
 
     abstract public function times(int $multiplier): Money;
 
+    abstract public function currency(): string;
+
     public function equals(object $object): bool
     {
         $money = $object;
