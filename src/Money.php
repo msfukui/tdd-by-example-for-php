@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace TddByExampleForPhp;
 
-abstract class Money
+class Money
 {
-    abstract public function times(int $multiplier): Money;
-
-    protected function __construct(protected int $amount, protected string $currency)
+    public function __construct(protected int $amount, protected string $currency)
     {
     }
 
@@ -16,7 +14,12 @@ abstract class Money
     {
         $money = $object;
         return $this->amount === $money->amount &&
-            get_class($this) === get_class($money);
+            $this->currency() === $money->currency();
+    }
+
+    public function times(int $multiplier): Money
+    {
+        return new Money($this->amount * $multiplier, $this->currency);
     }
 
     public static function dollar(int $amount): Money
@@ -32,5 +35,10 @@ abstract class Money
     public function currency(): string
     {
         return $this->currency;
+    }
+
+    public function toString(): string
+    {
+        return $this->amount . ' ' . $this->currency;
     }
 };
