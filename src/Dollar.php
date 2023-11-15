@@ -6,7 +6,7 @@ namespace TddByExampleForPhp;
 
 class Dollar
 {
-    public function __construct(public int $amount)
+    public function __construct(private int $amount)
     {
     }
 
@@ -15,7 +15,7 @@ class Dollar
         return new Dollar($this->amount * $multiplier);
     }
 
-    public function equals($object): bool
+    public function equals(object $object): bool
     {
         $dollar = $object;
         return $this->amount === $dollar->amount;
