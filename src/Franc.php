@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace TddByExampleForPhp;
 
-class Franc
+final class Franc extends Money
 {
-    public function __construct(private int $amount)
+    public function __construct(int $amount)
     {
+        $this->amount = $amount;
     }
 
     public function times(int $multiplier): Franc
