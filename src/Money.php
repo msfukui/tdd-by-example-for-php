@@ -8,9 +8,9 @@ abstract class Money
 {
     protected int $amount;
 
-    abstract public function times(int $multiplier): Money;
+    protected string $currency;
 
-    abstract public function currency(): string;
+    abstract public function times(int $multiplier): Money;
 
     public function equals(object $object): bool
     {
@@ -27,5 +27,10 @@ abstract class Money
     public static function franc(int $amount): Money
     {
         return new Franc($amount);
+    }
+
+    public function currency(): string
+    {
+        return $this->currency;
     }
 };
