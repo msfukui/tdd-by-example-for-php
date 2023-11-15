@@ -8,8 +8,8 @@ describe("Franc", function () {
 
     test("multiplication", function () {
         $five = Money::Franc(5);
-        expect($five->times(2))->toEqual(Money::Franc(10));
-        expect($five->times(3))->toEqual(Money::Franc(15));
+        expect($five->times(2))->toEquals(Money::Franc(10));
+        expect($five->times(3))->toEquals(Money::Franc(15));
     });
 
     test("equality", function () {
