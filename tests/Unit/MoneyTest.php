@@ -30,4 +30,24 @@ describe("Money", function () {
         $reduced = $bank->reduce($sum, "USD");
         expect($reduced)->toEquals(Money::dollar(10));
     });
+
+    test("plus returns sum", function () {
+        $five = Money::dollar(5);
+        $sum = $five->plus($five);
+        expect($five)->toEquals($sum->augend);
+        expect($five)->toEquals($sum->addend);
+    });
+
+    test("reduce sum", function () {
+        $sum = new Sum(Money::dollar(3), Money::dollar(4));
+        $bank = new Bank();
+        $result = $bank->reduce($sum, "USD");
+        expect($result)->toEquals(Money::dollar(7));
+    });
+
+    test("reduce money", function () {
+        $bank = new Bank();
+        $result = $bank->reduce(Money::dollar(1), "USD");
+        expect($result)->toEquals(Money::dollar(1));
+    });
 });
