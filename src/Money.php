@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TddByExampleForPhp;
 
-class Money
+class Money implements Expression
 {
     public function __construct(protected int $amount, protected string $currency)
     {
@@ -42,7 +42,7 @@ class Money
         return $this->amount . ' ' . $this->currency;
     }
 
-    public function plus(Money $addend): Money
+    public function plus(Money $addend): Expression
     {
         return new Money($this->amount + $addend->amount, $this->currency);
     }
