@@ -22,4 +22,12 @@ describe("Money", function () {
         expect(Money::dollar(1)->currency())->toBe("USD");
         expect(Money::franc(1)->currency())->toBe("CHF");
     });
+
+    test("simple addition", function () {
+        $five = Money::dollar(5);
+        $sum = $five->plus($five);
+        $bank = new Bank();
+        $reduced = $bank->reduce($sum, "USD");
+        expect($reduced)->toEquals(Money::dollar(10));
+    });
 });
