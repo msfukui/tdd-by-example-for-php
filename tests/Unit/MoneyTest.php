@@ -50,4 +50,15 @@ describe("Money", function () {
         $result = $bank->reduce(Money::dollar(1), "USD");
         expect($result)->toEquals(Money::dollar(1));
     });
+
+    test("reduce money different currency", function () {
+        $bank = new Bank();
+        $bank->addRate("CHF", "USD", 2);
+        $result = $bank->reduce(Money::franc(2), "USD");
+        expect($result)->toEquals(Money::dollar(1));
+    });
+
+    test("identity rate", function () {
+        expect((new Bank())->rate("USD", "USD"))->toEqual(1);
+    });
 });
