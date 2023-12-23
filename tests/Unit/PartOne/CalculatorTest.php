@@ -2,7 +2,7 @@
 
 declare (strict_types=1);
 
-namespace TddByExampleForPhp;
+namespace TddByExampleForPhp\PartOne;
 
 describe('Calculator#sum', function () {
     it('may sum integers', function () {

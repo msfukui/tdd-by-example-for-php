@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TddByExampleForPhp;
+namespace TddByExampleForPhp\PartOne;
 
 describe("Money", function () {
 
