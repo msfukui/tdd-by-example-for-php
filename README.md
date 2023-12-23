@@ -4,7 +4,7 @@
 
 書籍「テスト駆動開発」を PHP で読み進めてみるレポジトリです。
 
-テストは練習がてら PEST(https://pestphp.com/) で書いていきます。
+Part 1 のテストは練習がてら PEST(https://pestphp.com/) で書いていきます。
 
 ## 環境構築
 
@@ -134,7 +134,7 @@ PHP runtime: 8.2.10
     * [x] 第16章 最後に抽象化 (Abstraction, Finally)
     * [x] 第17章 Moneyの例の回顧 (Money Retrospective)
 * Part 2 xUnit の例 (The xUnit Example)
-    * [ ] 第18章 xUnitへの第1歩 (First Steps to xUnit)
+    * [x] 第18章 xUnitへの第1歩 (First Steps to xUnit)
     * [ ] 第19章 テーブルの設定 (Set the Table)
     * [ ] 第20章 完了後の掃除 (Cleaning Up After)
     * [ ] 第21章 カウント (Counting)
