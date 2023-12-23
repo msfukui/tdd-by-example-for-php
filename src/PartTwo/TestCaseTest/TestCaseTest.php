@@ -10,7 +10,7 @@ use TddByExampleForPhp\PartTwo\WasRun;
 
 final class TestCaseTest
 {
-    static public function testRunning(): void
+    public static function testRunning(): void
     {
         $test = new WasRun("testMethod");
         assert($test->wasRun === false);

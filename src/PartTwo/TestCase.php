@@ -6,9 +6,7 @@ namespace TddByExampleForPhp\PartTwo;
 
 abstract class TestCase
 {
-    public function __construct(
-        private readonly string $name
-    )
+    public function __construct(private readonly string $name)
     {
     }
 
@@ -17,5 +15,3 @@ abstract class TestCase
         $this->{$this->name}();
     }
 }
-
-
