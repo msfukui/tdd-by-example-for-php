@@ -13,25 +13,13 @@ final class TestCaseTest extends TestCase
 {
     private WasRun $test;
 
-    public function setUp(): void
+    public function testTemplateMethod(): void
     {
         $this->test = new WasRun("testMethod");
-    }
-
-    public function testRunning(): void
-    {
         $this->test->run();
-        assert($this->test->wasRun === true);
-    }
-
-    public function testSetUp(): void
-    {
-        $this->test->run();
-        assert($this->test->wasSetUp === true);
+        assert("setUp testMethod tearDown " === $this->test->log);
     }
 }
 
-$testCaseTestRunning = new TestCaseTest("testRunning");
-$testCaseTestRunning->run();
-$testCaseTestSetUp = new TestCaseTest("testSetUp");
+$testCaseTestSetUp = new TestCaseTest("testTemplateMethod");
 $testCaseTestSetUp->run();

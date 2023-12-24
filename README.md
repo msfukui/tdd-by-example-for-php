@@ -170,7 +170,7 @@ Using version ^2.15 for phpmd/phpmd
 * Part 2 xUnit の例 (The xUnit Example)
     * [x] 第18章 xUnitへの第1歩 (First Steps to xUnit)
     * [x] 第19章 テーブルの設定 (Set the Table)
-    * [ ] 第20章 完了後の掃除 (Cleaning Up After)
+    * [x] 第20章 完了後の掃除 (Cleaning Up After)
     * [ ] 第21章 カウント (Counting)
     * [ ] 第22章 失敗の扱い (Dealing with Failure)
     * [ ] 第23章 スイートにまとめる方法 (How Suite It Is)
