@@ -172,7 +172,7 @@ Using version ^2.15 for phpmd/phpmd
     * [x] 第19章 テーブルの設定 (Set the Table)
     * [x] 第20章 完了後の掃除 (Cleaning Up After)
     * [x] 第21章 カウント (Counting)
-    * [ ] 第22章 失敗の扱い (Dealing with Failure)
+    * [x] 第22章 失敗の扱い (Dealing with Failure)
     * [ ] 第23章 スイートにまとめる方法 (How Suite It Is)
     * [ ] 第24章 xUnitの回顧 (xUnit Retrospective)
 * Part 3 テスト駆動開発のためのパターン (Patterns for Test-Driven Devekopment)
