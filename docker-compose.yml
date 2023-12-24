@@ -9,4 +9,5 @@ services:
       - PHP_CS_FIXER_IGNORE_ENV=1
     tty: true
     volumes:
+      - ./php/php.ini:/usr/local/etc/php/php.ini
       - .:/app

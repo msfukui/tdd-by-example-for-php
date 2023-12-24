@@ -9,11 +9,16 @@
   },
   "require-dev": {
     "pestphp/pest": "^2.24",
-    "friendsofphp/php-cs-fixer": "^3.38"
+    "friendsofphp/php-cs-fixer": "^3.38",
+    "phpmd/phpmd": "^2.15"
   },
   "config": {
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
+  },
+  "scripts": {
+    "phpmd": "phpmd src text phpmd.xml",
+    "phpmd:ci": "phpmd src github phpmd.xml --ignore-violations-on-exit"
   }
 }

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="MessDetector">
+    <phpmd_settings>
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/vendor/bin/phpmd" />
+    </phpmd_settings>
+  </component>
   <component name="PHPCSFixerOptionsConfiguration">
     <option name="codingStandard" value="Custom" />
     <option name="rulesetPath" value="$PROJECT_DIR$/.php-cs-fixer.dist.php" />
@@ -75,6 +80,11 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/phpmd/phpmd" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -148,6 +158,7 @@
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpUnit">
     <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" paratest_path="$PROJECT_DIR$/vendor/bin/paratest_for_phpstorm" use_configuration_file="true" />
       <phpunit_by_interpreter interpreter_id="0198b964-ec8b-4923-bb47-5df3e2097a26" configuration_file_path="/app/phpunit.xml" custom_loader_path="/app/vendor/autoload.php" paratest_path="$PROJECT_DIR$/vendor/bin/paratest_for_phpstorm" phpunit_phar_path="" use_configuration_file="true" />
     </phpunit_settings>
   </component>

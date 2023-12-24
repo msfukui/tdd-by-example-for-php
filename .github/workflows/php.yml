@@ -33,5 +33,8 @@ jobs:
     - name: Format
       run: vendor/bin/php-cs-fixer fix --dry-run --diff
 
+    - name: Cyclomatic complexity
+      run: composer phpmd:ci
+
     - name: UnitTest and Coverage
       run: vendor/bin/pest --coverage

@@ -113,6 +113,40 @@ PHP CS Fixer 3.26.1 Crank Cake by Fabien Potencier and Dariusz Ruminski.
 PHP runtime: 8.2.10
 ```
 
+### PHP Mess Detector
+
+```
+composer require --dev phpmd/phpmd
+./composer.json has been updated
+Running composer update phpmd/phpmd
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 5 installs, 0 updates, 0 removals
+  - Locking pdepend/pdepend (2.16.2)
+  - Locking phpmd/phpmd (2.15.0)
+  - Locking symfony/config (v6.4.0)
+  - Locking symfony/dependency-injection (v6.4.1)
+  - Locking symfony/var-exporter (v7.0.1)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 5 installs, 0 updates, 0 removals
+  - Downloading symfony/var-exporter (v7.0.1)
+  - Downloading symfony/dependency-injection (v6.4.1)
+  - Downloading symfony/config (v6.4.0)
+  - Downloading pdepend/pdepend (2.16.2)
+  - Downloading phpmd/phpmd (2.15.0)
+  - Installing symfony/var-exporter (v7.0.1): Extracting archive
+  - Installing symfony/dependency-injection (v6.4.1): Extracting archive
+  - Installing symfony/config (v6.4.0): Extracting archive
+  - Installing pdepend/pdepend (2.16.2): Extracting archive
+  - Installing phpmd/phpmd (2.15.0): Extracting archive
+Generating autoload files
+57 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+No security vulnerability advisories found.
+Using version ^2.15 for phpmd/phpmd
+```
+
 ## 章立て
 
 * Part 1 Moneyの例 (The Money Example)
