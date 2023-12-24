@@ -17,9 +17,11 @@ final class TestCaseTest extends TestCase
 
     private TestResult $result;
 
-    public function setUp(): void {
+    public function setUp(): void
+    {
         $this->result = new TestResult();
     }
+
     public function testTemplateMethod(): void
     {
         $this->test = new WasRun("testMethod");
