@@ -21,6 +21,13 @@ final class TestCaseTest extends TestCase
         assert("1 run, 0 failed" === $result->summary());
     }
 
+    public function testResult(): void
+    {
+        $this->test = new WasRun("testMethod");
+        $result = $this->test->run();
+        assert("1 run, 0 failed" === $result->summary());
+    }
+
     public function testFailedResult(): void
     {
         $this->test = new WasRun("testBrokenMethod");
@@ -38,6 +45,10 @@ final class TestCaseTest extends TestCase
 }
 
 $testCaseTestSetUp = new TestCaseTest("testTemplateMethod");
+$testCaseTestSetUp->run();
+$testCaseTestSetUp = new TestCaseTest("testResult");
+$testCaseTestSetUp->run();
+$testCaseTestSetUp = new TestCaseTest("testFailedResultFormatting");
 $testCaseTestSetUp->run();
 $testCaseTestSetUp = new TestCaseTest("testFailedResult");
 $testCaseTestSetUp->run();
