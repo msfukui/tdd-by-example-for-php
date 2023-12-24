@@ -14,9 +14,14 @@ abstract class TestCase
     {
         $this->setUp();
         $this->{$this->name}();
+        $this->tearDown();
     }
 
     public function setUp(): void
+    {
+    }
+
+    public function tearDown(): void
     {
     }
 }

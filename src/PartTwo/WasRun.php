@@ -6,17 +6,20 @@ namespace TddByExampleForPhp\PartTwo;
 
 final class WasRun extends TestCase
 {
-    public bool $wasRun = false;
-    public bool $wasSetUp = false;
+    public string $log = '';
 
     public function testMethod(): void
     {
-        $this->wasRun = true;
+        $this->log .= 'testMethod ';
     }
 
     public function setUp(): void
     {
-        $this->wasRun = false;
-        $this->wasSetUp = true;
+        $this->log = 'setUp ';
+    }
+
+    public function tearDown(): void
+    {
+        $this->log .= 'tearDown ';
     }
 }
