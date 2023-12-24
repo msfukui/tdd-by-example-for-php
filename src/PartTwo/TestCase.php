@@ -4,24 +4,24 @@ declare(strict_types=1);
 
 namespace TddByExampleForPhp\PartTwo;
 
+use Exception;
+
 abstract class TestCase
 {
     public function __construct(protected readonly string $name)
     {
     }
 
-    public function run(): TestResult
+    public function run(TestResult $result): void
     {
-        $result = new TestResult();
         $result->testStarted();
         $this->setUp();
         try {
             $this->{$this->name}();
-        } catch (\Exception) {
+        } catch (Exception) {
             $result->testFailed();
         }
         $this->tearDown();
-        return $result;
     }
 
     public function setUp(): void
