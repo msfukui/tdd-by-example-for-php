@@ -11,14 +11,27 @@ use TddByExampleForPhp\PartTwo\TestCase;
 
 final class TestCaseTest extends TestCase
 {
+    private WasRun $test;
+
+    public function setUp(): void
+    {
+        $this->test = new WasRun("testMethod");
+    }
+
     public function testRunning(): void
     {
-        $test = new WasRun("testMethod");
-        assert($test->wasRun === false);
-        $test->run();
-        assert($test->wasRun === true);
+        $this->test->run();
+        assert($this->test->wasRun === true);
+    }
+
+    public function testSetUp(): void
+    {
+        $this->test->run();
+        assert($this->test->wasSetUp === true);
     }
 }
 
-$testCaseTest = new TestCaseTest("testRunning");
-$testCaseTest->run();
+$testCaseTestRunning = new TestCaseTest("testRunning");
+$testCaseTestRunning->run();
+$testCaseTestSetUp = new TestCaseTest("testSetUp");
+$testCaseTestSetUp->run();
