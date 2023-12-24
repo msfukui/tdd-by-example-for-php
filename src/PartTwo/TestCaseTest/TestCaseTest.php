@@ -15,36 +15,37 @@ final class TestCaseTest extends TestCase
 {
     private WasRun $test;
 
+    private TestResult $result;
+
+    public function setUp(): void {
+        $this->result = new TestResult();
+    }
     public function testTemplateMethod(): void
     {
         $this->test = new WasRun("testMethod");
-        $result = new TestResult();
-        $this->test->run($result);
-        assert("1 run, 0 failed" === $result->summary());
+        $this->test->run($this->result);
+        assert("1 run, 0 failed" === $this->result->summary());
     }
 
     public function testResult(): void
     {
         $this->test = new WasRun("testMethod");
-        $result = new TestResult();
-        $this->test->run($result);
-        assert("1 run, 0 failed" === $result->summary());
+        $this->test->run($this->result);
+        assert("1 run, 0 failed" === $this->result->summary());
     }
 
     public function testFailedResult(): void
     {
         $this->test = new WasRun("testBrokenMethod");
-        $result = new TestResult();
-        $this->test->run($result);
-        assert("1 run, 1 failed" === $result->summary());
+        $this->test->run($this->result);
+        assert("1 run, 1 failed" === $this->result->summary());
     }
 
     public function testFailedResultFormatting(): void
     {
-        $result = new TestResult();
-        $result->testStarted();
-        $result->testFailed();
-        assert("1 run, 1 failed" === $result->summary());
+        $this->result->testStarted();
+        $this->result->testFailed();
+        assert("1 run, 1 failed" === $this->result->summary());
     }
 
     public function testSuite(): void
@@ -52,9 +53,8 @@ final class TestCaseTest extends TestCase
         $suite = new TestSuite();
         $suite->add(new WasRun("testMethod"));
         $suite->add(new WasRun("testBrokenMethod"));
-        $result = new TestResult();
-        $suite->run($result);
-        assert("2 run, 1 failed" === $result->summary());
+        $suite->run($this->result);
+        assert("2 run, 1 failed" === $this->result->summary());
     }
 }
 
