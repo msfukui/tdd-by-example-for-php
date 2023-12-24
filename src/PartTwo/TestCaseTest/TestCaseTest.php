@@ -7,16 +7,31 @@ namespace TddByExampleForPhp\PartTwo\TestCaseTest;
 require_once('../../../vendor/autoload.php');
 
 use TddByExampleForPhp\PartTwo\WasRun;
+use TddByExampleForPhp\PartTwo\TestCase;
 
-final class TestCaseTest
+final class TestCaseTest extends TestCase
 {
-    public static function testRunning(): void
+    private WasRun $test;
+
+    public function setUp(): void
     {
-        $test = new WasRun("testMethod");
-        assert($test->wasRun === false);
-        $test->run();
-        assert($test->wasRun === true);
+        $this->test = new WasRun("testMethod");
+    }
+
+    public function testRunning(): void
+    {
+        $this->test->run();
+        assert($this->test->wasRun === true);
+    }
+
+    public function testSetUp(): void
+    {
+        $this->test->run();
+        assert($this->test->wasSetUp === true);
     }
 }
 
-TestCaseTest::testRunning();
+$testCaseTestRunning = new TestCaseTest("testRunning");
+$testCaseTestRunning->run();
+$testCaseTestSetUp = new TestCaseTest("testSetUp");
+$testCaseTestSetUp->run();

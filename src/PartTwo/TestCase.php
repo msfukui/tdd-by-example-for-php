@@ -6,12 +6,17 @@ namespace TddByExampleForPhp\PartTwo;
 
 abstract class TestCase
 {
-    public function __construct(private readonly string $name)
+    public function __construct(protected readonly string $name)
     {
     }
 
     public function run(): void
     {
+        $this->setUp();
         $this->{$this->name}();
+    }
+
+    public function setUp(): void
+    {
     }
 }

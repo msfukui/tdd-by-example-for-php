@@ -135,7 +135,7 @@ PHP runtime: 8.2.10
     * [x] 第17章 Moneyの例の回顧 (Money Retrospective)
 * Part 2 xUnit の例 (The xUnit Example)
     * [x] 第18章 xUnitへの第1歩 (First Steps to xUnit)
-    * [ ] 第19章 テーブルの設定 (Set the Table)
+    * [x] 第19章 テーブルの設定 (Set the Table)
     * [ ] 第20章 完了後の掃除 (Cleaning Up After)
     * [ ] 第21章 カウント (Counting)
     * [ ] 第22章 失敗の扱い (Dealing with Failure)
