@@ -15,7 +15,11 @@ abstract class TestCase
         $result = new TestResult();
         $result->testStarted();
         $this->setUp();
-        $this->{$this->name}();
+        try {
+            $this->{$this->name}();
+        } catch (\Exception) {
+            $result->testFailed();
+        }
         $this->tearDown();
         return $result;
     }
