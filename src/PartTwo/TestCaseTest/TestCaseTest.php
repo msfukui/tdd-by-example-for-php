@@ -6,8 +6,8 @@ namespace TddByExampleForPhp\PartTwo\TestCaseTest;
 
 require_once('../../../vendor/autoload.php');
 
-use TddByExampleForPhp\PartTwo\WasRun;
 use TddByExampleForPhp\PartTwo\TestCase;
+use TddByExampleForPhp\PartTwo\WasRun;
 
 final class TestCaseTest extends TestCase
 {
@@ -16,10 +16,19 @@ final class TestCaseTest extends TestCase
     public function testTemplateMethod(): void
     {
         $this->test = new WasRun("testMethod");
-        $this->test->run();
-        assert("setUp testMethod tearDown " === $this->test->log);
+        $result = $this->test->run();
+        assert("1 run, 0 failed" === $result->summary());
+    }
+
+    public function testFailedResult(): void
+    {
+        $this->test = new WasRun("testBrokenMethod");
+        $result = $this->test->run();
+        assert("1 run, 1 failed" === $result->summary());
     }
 }
 
 $testCaseTestSetUp = new TestCaseTest("testTemplateMethod");
+$testCaseTestSetUp->run();
+$testCaseTestSetUp = new TestCaseTest("testFailedResult");
 $testCaseTestSetUp->run();
