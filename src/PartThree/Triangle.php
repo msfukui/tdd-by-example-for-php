@@ -22,7 +22,7 @@ final class Triangle
         }
         if ($line1 === $line2 && $line2 === $line3) {
             return 1;
-        } else if ($line1 === $line2 || $line2 === $line3 || $line3 === $line1) {
+        } elseif ($line1 === $line2 || $line2 === $line3 || $line3 === $line1) {
             return 2;
         }
         return 3;

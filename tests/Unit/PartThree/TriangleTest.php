@@ -6,7 +6,7 @@ namespace TddByExampleForPhp\PartThree;
 
 use Exception;
 
-describe ('Triangle::evaluate()', function () {
+describe('Triangle::evaluate()', function () {
 
     it('正三角形の判定', function () {
         expect(Triangle::evaluate(1, 1, 1))->toBe(1);
