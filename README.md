@@ -184,5 +184,5 @@ Using version ^2.15 for phpmd/phpmd
     * [x] 第30章 デザインパターン (Design Patterns)
     * [x] 第31章 リファクタリング (Refactaring)
     * [x] 第32章 TDDの習得 (Mastering TDD)
-* [ ] 付録 I 影響図 (Appendix I: Influence)
-* [ ] 付録 II フィボナッチ (Appendix II: Fibonacci)
+* [x] 付録 I 影響図 (Appendix I: Influence)
+* [x] 付録 II フィボナッチ (Appendix II: Fibonacci)
